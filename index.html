@@ -13,12 +13,19 @@
         <nav class="navbar">
             <div class="container">
                 <a href="index.html" class="logo">Хожиакбар</a>
-                <ul class="nav-links">
+                
+                <ul class="nav-links" id="nav-menu">
                     <li><a href="index.html" class="active">Главная</a></li>
                     <li><a href="about.html">Обо мне</a></li>
                     <li><a href="projects.html">Проекты</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
+        
+                <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
 
@@ -32,7 +39,7 @@
                     <a href="contact.html" class="btn btn-secondary">Связаться со мной</a>
                 </div>
                 <div class="hero-image">
-                    <img src="path/to/your/photo.jpg" alt="Фото Хожиакбара">
+                    <img src="images/photo-hero.jpg" alt="Фото Хожиакбара">
                 </div>
             </div>
         </header>
@@ -43,5 +50,15 @@
             <p>&copy; 2025 Хожиакбар. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
